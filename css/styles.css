@@ -1,0 +1,658 @@
+/* Configuración general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 60px 0 0; /* 60px arriba para la barra fija */
+    line-height: 1.6;
+    background-color: #c0fab4;
+    color: #333;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 0; /* Asegura que no tenga margen superior extra */
+}
+
+/* BARRA DE NAVEGACIÓN FIJA */
+nav {
+    position: fixed; /* Fija la barra en la pantalla */
+    top: 0;          /* La coloca en la parte superior */
+    width: 100%;     /* Ocupa todo el ancho disponible */
+    z-index: 1000;   /* Asegura que esté por encima de otros elementos */
+    background-color: #333; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;  /* Centrado adicional */
+    padding: 0;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Limita el ancho máximo */
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+
+
+/* Estilo general de secciones */
+section {
+    padding: 2rem;
+    margin: 2rem 5%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+}
+
+
+
+/* Estilo de la sección de tarjetas */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Estilo individual de cada tarjeta */
+.tarjeta {
+    background-color: #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(3, 3, 3, 0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+
+
+
+/* Estilo Sobre Mi */
+#sobre-mi {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+}
+
+.sobre-mi-contenido {
+    display: flex;
+    align-items: center; /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente el conjunto */
+    gap: 2rem; /* espacio entre texto e imagen */
+    flex-wrap: wrap;
+}
+
+.texto-sobre-mi {
+    text-align: center;
+    max-width: 400px;
+}
+
+.texto-sobre-mi h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.texto-sobre-mi p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#sobre-mi img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sobre-mi img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+/* CENTRADO DE TÍTULO Y DESCRIPCIÓN EN PROYECTOS */
+#proyectos {
+    text-align: center; /* Centra todo el contenido */
+}
+
+#proyectos h2 {
+    margin: 0 auto 1rem auto; /* Centrado horizontal con margen inferior */
+    display: block; /* Asegura comportamiento de bloque */
+    width: fit-content; /* Ajusta al ancho del texto */
+    position: relative; 
+}
+
+#proyectos h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    margin: 0.5rem auto 0 auto;
+}
+
+#proyectos > p { /* Selector específico para el párrafo debajo del título */
+    max-width: 600px;
+    margin: 0 auto 2rem auto; /* Centrado horizontal con margen inferior */
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* AJUSTE DE IMÁGENES EN PROYECTOS */
+#proyectos .tarjeta img {
+    height: 250px; 
+    object-fit: cover; /* Mantiene el aspecto de las imágenes */
+    width: 100%; /* Conserva el ancho completo */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+}
+
+#proyectos .tarjeta {
+    max-width: 250px; 
+    margin-bottom: 0; 
+}
+
+/* Ajusta el padding interno de las tarjetas */
+#proyectos .tarjeta p {
+    padding: 0.8rem; 
+    margin: 0; /* Elimina márgenes internos */
+    font-size: 0.95rem; 
+}
+
+
+
+
+
+/* --- FORMULARIO DE CONTACTO --- */
+#contacto {
+    padding: 1.5rem; 
+    margin: 1rem auto; /* Margen más pequeño y centrado */
+    background-color: white;
+    border-radius: 0.5rem;
+    max-width: 650px; /* Mismo ancho máximo que el formulario + padding */
+    width: 90%; /* Para que no toque los bordes en móviles */
+    text-align: left; /* Para mandar a la izuierda el texto de cada ttulo */
+}
+
+#contacto h2 { /* Titulo centrado */
+    text-align: center;
+    width: 100%;
+    margin: 0 0 1rem 0; /* Ajusta el margen inferior */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.10rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0; 
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+/* BOTONES */
+button {
+    background-color: #45a049;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* ENLACES */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+/* IMÁGENES */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+
+/* ANIMACIÓN EN LAS TARJETAS */
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+
+
+
+
+/* LISTADO DE HABILIDADES */
+#habilidades {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.contenedor-habilidades {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* CENTRADO DEL TÍTULO "HABILIDADES" */
+#habilidades h2.titulo-centrado {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    display: block;
+}
+
+.lista-habilidades {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Elimina las viñetas */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-habilidad {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.item-habilidad:hover {
+    background-color: #e8f5e9;
+    border-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive: móviles */
+@media (max-width: 768px) {
+    .contenedor-habilidades {
+        flex-direction: column;
+    }
+    
+    .lista-habilidades {
+        gap: 0.8rem;
+    }
+}
+
+
+
+
+/* SECCIÓN DE SERIES CON EFECTO HOVER */
+#series {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.series {
+    display: inline-block;
+    width: 30%;
+    min-width: 250px;
+    margin: 1%;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+}
+
+.series img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.series h3 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+}
+
+/* Efecto al hacer hover */
+.series:hover img {
+    filter: brightness(0.6);
+    transform: scale(1.02);
+}
+
+/* Contenedor de texto (fondo + comentarios) */
+.series::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.series:hover::after {
+    opacity: 1;
+}
+
+/* Estilo para los comentarios */
+.series p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+    margin: 0;
+    padding: 10px;
+}
+
+.series:hover p {
+    opacity: 1;
+}
+
+/* Espaciado entre comentarios */
+.series p + p {
+    margin-top: 15px;
+}
+
+
+
+
+/* Estilo general del modal "NO TOCAR"*/
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Contenido del modal */
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Botón de cerrar */
+  #cerrar-modal {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #cerrar-modal:hover {
+    background-color: #d32f2f;
+  }
+
+
+
+  /* Estilos del Modal de Éxito */
+.modal-exito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-exito:target {
+    display: flex;
+    animation: fadeIn 0.3s;
+}
+
+.modal-contenido {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+
+/* BONUS TRACK - IMÁGENES */
+#bonus-track {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+#bonus-track h2 {
+    margin: 0 auto 2rem auto;
+    font-size: 2rem;
+    color: #2E7D32;
+    position: relative;
+    display: inline-block;
+}
+
+#bonus-track h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #4CAF50;
+}
+
+.contenedor-bonus {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.bonus-track {
+    position: relative;
+    width: 300px;
+    margin-bottom: 1rem;
+}
+
+.bonus-track h3 {
+    text-align: center;
+    margin: 1rem 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.bonus-track img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover para comentarios */
+.bonus-track p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.bonus-track:hover p {
+    opacity: 1;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .contenedor-bonus {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bonus-track {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+
+/* ESTILOS PARA EL FOOTER Y SUS REDES SOCIALES */
+footer {
+    background-color: #030303;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer ul {
+    list-style: none; /* Saca las viñetas */
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex; /* Alinea de izquierda a derecha */
+    justify-content: center; /* Centra los ítems horizontalmente */
+    gap: 1.5rem; /* Espacio entre redes */
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #f5f7f8; /* Color base de los links */
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #7ba0b3; /* Cambia el color al pasar el mouse */
+}

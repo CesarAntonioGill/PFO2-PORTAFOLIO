@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio personal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+
+    <!-- Encabezado principal del sitio -->
+<header>
+    <h1>Bienvenidos a mi portafolio</h1>
+</header>
+
+
+    <!-- Barra de navegación principal -->
+<nav>
+    <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Mis Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#series">Mis Series Favoritas</a></li>
+        <li><a href="#" id="no-tocar">No Tocar</a></li> 
+        <li><a href="#bonus-track">Bonus Track</a></li>
+        
+        
+    </ul>
+</nav>
+
+<!-- Modal oculto inicialmente -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <p>Que desobediente eres</p>
+      <p>Me agradas</p>
+      <button id="cerrar-modal">Cerrar</button>
+    </div>
+  </div>
+  
+  <script>
+    const noTocar = document.getElementById('no-tocar');
+    const modal = document.getElementById('modal');
+    const cerrarModal = document.getElementById('cerrar-modal');
+  
+    noTocar.addEventListener('click', function(event) {
+      event.preventDefault(); // Evita que intente ir a #
+      modal.style.display = 'flex'; // Muestra el modal
+    });
+  
+    cerrarModal.addEventListener('click', function() {
+      modal.style.display = 'none'; // Oculta el modal
+    });
+  </script>
+
+
+<!-- Aca empieza el contenido principal de la pagina dentro del main -->
+
+<main>
+    <!-- Sección: presentacion personal -->
+    <section id="sobre-mi">
+        <div class="sobre-mi-contenido">
+          <div class="texto-sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Hola soy Antonio, soy de Formosa y tengo 34 años. Trabajo en una obra social hace 13 años 
+                y no cuento con experiencia en IT. Todo esto es nuevo para mí, así que le voy a poner 
+                el mejor empeño en aprender.</p>
+          </div>
+          <img src="img/Foto.jpg" alt="Antonio Gill">
+        </div>
+      </section>
+      
+
+    <!-- Sección: Tarjetas de Proyectos  -->
+    <section id="proyectos">
+        <h2>Mis Proyectos Personales</h2>
+        <p>Metas propuestas para finales de este 2025</p>
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta">
+                <img src="img/egresado.jpg" alt="Proyecto 1">
+                <p>Recibirme de Tecnico Superior en Desarrollo de Software</p>
+            </div>
+            <div class="tarjeta">
+                <img src="img/casa.jpg" alt="Proyecto 2">
+                <p>Terminar ampliacion de la casa</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Sección: Listado de Habilidades -->
+<section id="habilidades">
+    <h2 class="titulo-centrado">Habilidades</h2>
+    <div class="contenedor-habilidades">
+        <ul class="lista-habilidades">
+            <li><div class="item-habilidad">Aquí deberían estar mis habilidades...</div></li>
+            <li><div class="item-habilidad">Si tan solo las tuviera ;(</div></li>
+        </ul>
+        <ul class="lista-habilidades">
+            <li><div class="item-habilidad">Ah si cierto, hice un curso de Testing</div></li>
+            <li><div class="item-habilidad">Y eso es todo amigos :)</div></li>
+        </ul>
+    </div>
+</section>
+
+
+ <!-- Sección: Formulario de Contacto -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <form action="#formulario-enviado" method="get">
+        <!-- Campos del formulario -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea 
+            id="comentarios" 
+            name="comentarios" 
+            rows="4" 
+            placeholder="Escribe tus comentarios aquí..."
+        ></textarea>
+
+        <button type="submit">Enviar</button>
+        
+        <!-- Modal de éxito (se activa al enviar) -->
+        <div id="formulario-enviado" class="modal-exito">
+            <div class="modal-contenido">
+                <p>¡Formulario enviado con éxito!</p>
+                <a href="#contacto" class="cerrar-modal">✕</a>
+            </div>
+        </div>
+    </form>
+</section>
+
+    <!-- Sección: Series Favoritas -->
+    <section id="series">
+        <h2>Mis Series Favoritas</h2>
+        <div class="series">
+            <h3>Breaking Bad</h3>
+            <img src="img/BD.jpg" alt="Breaking Bad">
+            <p>Say my name</p>
+        </div>
+        <div class="series">
+            <h3>Game of Thrones</h3>
+            <img src="img/GOT.jpg" alt="Game of Thrones">
+            <p>Esta porque me gusta la trama :)</p>
+        </div>
+        <div class="series">
+            <h3>The Walking Dead</h3>
+            <img src="img/TWD.jpg" alt="The Walking Dead">
+            <p>Todavía no supero la muerte de Glen</p>
+        </div>
+    </section>
+
+
+    <!-- Sección: Bonus Track -->
+    <section id="bonus-track">
+        <h2>Cuidado que muerden</h2>
+        <div class="contenedor-bonus">
+            <div class="bonus-track">
+                <h3>Rodolfo</h3>
+                <img src="img/rodolfo.jpg" alt="Rodolfo">
+                <p>Re mimoso</p>
+            </div>
+            <div class="bonus-track">
+                <h3>Rogelio</h3>
+                <img src="img/rogelio.jpg" alt="Rogelio">
+                <p>Re loquito</p>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+<footer>
+    <p>© 2025 - Todos los derechos reservados.</p>
+    <p>Mis redes:</p>
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">X</a></li>
+        <li><a href="#">LinkedIn</a></li>
+    </ul>
+</footer>
+
+</body>
+
+</html>
