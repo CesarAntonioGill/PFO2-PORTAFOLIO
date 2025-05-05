@@ -165,24 +165,26 @@
 
 
     <!-- Sección: Bonus Track -->
-    <section id="bonus-track">
-        <h2>Cuidado que muerden</h2>
-        <div class="contenedor-bonus">
-            <div class="bonus-track">
-                <h3>Rodolfo</h3>
-                <img src="img/rodolfo.jpg" alt="Rodolfo">
-                <p>Re mimoso</p>
-            </div>
-            <div class="bonus-track">
-                <h3>Rogelio</h3>
-                <img src="img/rogelio.jpg" alt="Rogelio">
-                <p>Re loquito</p>
-            </div>
-        </div>
-    </section>
+<section id="bonus-track">
+    <h2>Cuidado que muerden</h2>
+
+    <!-- Contenedor de todas las imágenes -->
+    <div class="contenedor-bonus" id="contenedor-bonus">
+        <!-- Las imágenes se cargarán dinámicamente por JavaScript -->
+    </div>
+
+    <!-- Flechas para navegar -->
+    <div class="navegacion-galeria">
+        <button id="flecha-izquierda">←</button>
+        <button id="flecha-derecha">→</button>
+    </div>
+</section>
+
+
 
 
 </main>
+  
 
 <footer>
     <p>© 2025 - Todos los derechos reservados.</p>
@@ -194,6 +196,20 @@
         <li><a href="#">LinkedIn</a></li>
     </ul>
 </footer>
+
+
+<!-- Contador de Visitas -->
+<div id="contador-visitas" style="text-align: center; margin: 2rem 0; font-size: 1.2rem; color: #555;"></div>
+
+
+<!--funcionalidades JavaScript-->
+
+<script src="js/validar-formulario.js" defer></script>
+<script src="js/modo-oscuro-claro.js" defer></script>
+<script src="js/ocultar-mostrar.js" defer></script>
+<script src="js/galeria-dinamica.js" defer></script>
+<script src="js/contador-visitas.js" defer></script>
+
 
 </body>
 
